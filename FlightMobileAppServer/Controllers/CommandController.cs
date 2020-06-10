@@ -35,6 +35,7 @@ namespace FlightMobileAppServer.Controllers
                 //return "Dont success".
             }
 
+            flightGear.UpdateTcpSetValues(value);
         }
 
         // PUT: api/Command/5

@@ -89,9 +89,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClientTcp.cs" />
     <Compile Include="Models\Command.cs" />
+    <Compile Include="Models\FakeOfHttp.cs" />
     <Compile Include="Models\FlightGear.cs" />
     <Compile Include="Models\GetSocket.cs" />
+    <Compile Include="Models\ITCPClient.cs" />
     <Compile Include="Models\Screenshot.cs" />
     <Compile Include="Models\Server.cs" />
     <Compile Include="Models\TCPServer.cs" />

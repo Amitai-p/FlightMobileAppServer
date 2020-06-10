@@ -13,8 +13,12 @@ namespace FlightMobileAppServer
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-           
             Server server = new Server();
+            server.Start();
+            FakeOfHttp fake = new FakeOfHttp();
+
         }
+
+
     }
 }

@@ -6,20 +6,30 @@ using System.Net.Sockets;
 using System.Text;
 using System.Web;
 using System.IO;
+using System.Web.Services.Description;
 
 namespace FlightMobileAppServer.Models
 {
     public class Server
     {
+        FlightGear flightGear;
+
+        // Connection to simulator for screenshot.
+        // Connection to application.
         public Server()
         {
-            string host;
-            int port = 80;
+            flightGear = new FlightGear();
+         
+        
+            //string result = SocketSendReceive(hostTcp, portTcp);
 
-           
-            host = "http://localhost:8080/screenshot?window=WindowA&stream=y";
-            string result = SocketSendReceive(host, port);
-            Console.WriteLine(result);
+            
+        }
+        
+        public void Start()
+        {
+            flightGear.Start();
+            
         }
         /* IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, 8000);
          Socket newsock = new Socket(AddressFamily.InterNetwork,
